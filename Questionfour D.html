@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ministry of Health</title>
+</head>
+<body>
+
+  <h1>Ministry of Health</h1>
+
+  <h2>What is the DOM?</h2>
+  <p>The <b>Document Object Model (DOM)</b> is a tree-like representation of an HTML page that the browser creates when the page loads. Every element (heading, paragraph, div, image) becomes an object, called a node, that JavaScript can access.</p>
+
+  <h2>How JavaScript interacts with it</h2>
+  <p>JavaScript uses the DOM to find elements (for example <code>document.getElementById()</code>), read or change their content and style (<code>innerHTML</code>, <code>style.display</code>), and respond to events. This lets a page change without reloading.</p>
+
+  <!-- The alert banner -->
+  <div id="alert-banner">
+    COVID-19 NOTICE: Please wear a mask and sanitise your hands when visiting our offices.
+  </div>
+
+  <script>
+    // Days considered weekdays (0 = Sunday, 1 = Monday ... 6 = Saturday)
+    var weekdays = [1, 2, 3, 4, 5];
+
+    // Get today's day number
+    var today = new Date().getDay();
+
+    // Get the banner element from the DOM
+    var banner = document.getElementById("alert-banner");
+
+    var isWeekday = false;
+
+    // LOOP: check whether today is in the weekdays list
+    for (var i = 0; i < weekdays.length; i++) {
+      if (today === weekdays[i]) {
+        isWeekday = true;
+      }
+    }
+
+    // Show on weekdays, hide on weekends
+    if (isWeekday) {
+      banner.style.display = "block";   // show the notice
+    } else {
+      banner.style.display = "none";    // hide the notice
+    }
+  </script>
+
+</body>
+</html>

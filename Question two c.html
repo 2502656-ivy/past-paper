@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Absolute and Relative Hyperlinks</title>
+</head>
+<body>
+
+  <h1>Absolute vs Relative Hyperlinks</h1>
+
+  <!-- 1. ABSOLUTE HYPERLINK -->
+  <h2>1. Absolute Hyperlink</h2>
+  <p>Uses the <b>full web address (URL)</b> of a page, including the protocol (https://) and the domain name. It works from anywhere because it points to one exact location.</p>
+  <p><b>When to use it:</b> To link to a page outside the bank's intranet, or to a page on a different website.</p>
+  <p><b>Example:</b> The bank's staff portal links to the Central Bank of Kenya website for official regulations.</p>
+
+  <a href="https://www.centralbank.go.ke">Visit Central Bank of Kenya</a>
+
+  <!-- 2. RELATIVE HYPERLINK -->
+  <h2>2. Relative Hyperlink</h2>
+  <p>Uses only the <b>file path</b> of a page, starting from the location of the current page. It does not include the domain name.</p>
+  <p><b>When to use it:</b> To link between pages inside the bank's own intranet. If the intranet is moved to a new server or domain, the links keep working without being edited.</p>
+  <p><b>Example:</b> The intranet home page links to the HR leave form and the loans department page, which are stored in the same website.</p>
+
+  <a href="hr/leave-form.html">Apply for Leave</a><br>
+  <a href="departments/loans.html">Loans Department</a>
+
+</body>
+</html>

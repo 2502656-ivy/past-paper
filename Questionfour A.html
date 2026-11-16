@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Data Types and Variables</title>
+</head>
+<body>
+
+  <h1>JavaScript Primitive Data Types</h1>
+
+  <script>
+    // ===== FOUR PRIMITIVE DATA TYPES =====
+
+    // 1. String: text inside quotes
+    let studentName = "Wanjiku";
+
+    // 2. Number: whole numbers and decimals
+    let marks = 85.5;
+
+    // 3. Boolean: true or false
+    let hasPassed = true;
+
+    // 4. Undefined: a variable declared but with no value yet
+    let middleName;
+
+    console.log(typeof studentName);   // string
+    console.log(typeof marks);         // number
+    console.log(typeof hasPassed);     // boolean
+    console.log(typeof middleName);    // undefined
+
+
+    // ===== var, let and const =====
+
+    // var: function-scoped, can be redeclared and reassigned
+    var county = "Nairobi";
+    var county = "Mombasa";     // allowed (can cause bugs)
+    county = "Kisumu";          // allowed
+
+    // let: block-scoped, can be reassigned but NOT redeclared
+    let age = 20;
+    age = 21;                   // allowed
+    // let age = 22;            // Error: already declared
+
+    // const: block-scoped, can NOT be reassigned or redeclared
+    const country = "Kenya";
+    // country = "Uganda";      // Error: cannot reassign a constant
+  </script>
+
+</body>
+</html>

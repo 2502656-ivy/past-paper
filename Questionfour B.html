@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events on an M-Banking Website</title>
+</head>
+<body>
+
+  <h1>M-Banking: JavaScript Events</h1>
+
+  <!-- 1. CLICK EVENT (HTML attribute) -->
+  <h2>1. click event</h2>
+  <p><b>Scenario:</b> A customer clicks the "Check Balance" button to see their account balance.</p>
+  <button onclick="showBalance()">Check Balance</button>
+
+  <!-- 2. SUBMIT EVENT (addEventListener) -->
+  <h2>2. submit event</h2>
+  <p><b>Scenario:</b> A customer enters their phone number and PIN and submits the login form.</p>
+  <form id="loginForm">
+    <input type="text" placeholder="Phone number" required>
+    <input type="password" placeholder="PIN" required>
+    <input type="submit" value="Login">
+  </form>
+
+  <!-- 3. CHANGE EVENT (addEventListener) -->
+  <h2>3. change event</h2>
+  <p><b>Scenario:</b> A customer selects a different account (Savings or Current) from the dropdown and the page updates the account shown.</p>
+  <select id="accountType">
+    <option value="savings">Savings Account</option>
+    <option value="current">Current Account</option>
+  </select>
+
+  <script>
+    // 1. click: attached with the HTML attribute onclick
+    function showBalance() {
+      alert("Your balance is KSh 12,500");
+    }
+
+    // 2. submit: attached with addEventListener
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();   // stops the page from reloading
+      alert("Login successful");
+    });
+
+    // 3. change: attached with addEventListener
+    document.getElementById("accountType").addEventListener("change", function() {
+      alert("You selected: " + this.value + " account");
+    });
+  </script>
+
+</body>
+</html>

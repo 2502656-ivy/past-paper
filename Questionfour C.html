@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Water Bill Payment Portal</title>
+</head>
+<body>
+
+  <h1>Nairobi Water Bill Payment</h1>
+
+  <label>Meter Reading:</label>
+  <input type="number" id="meter"><br><br>
+
+  <label>Amount (KSh):</label>
+  <input type="number" id="amount"><br><br>
+
+  <button onclick="checkForm()">Pay Bill</button>
+
+  <script>
+    // The validator function
+    function validatePayment(meterReading, amount) {
+
+      if (!meterReading || !amount) {
+        // empty or zero (also catches NaN)
+        alert("Error: Meter reading and amount cannot be empty or zero.");
+      } else if (amount > 50000) {
+        alert("Error: Amount cannot be greater than KSh 50,000.");
+      } else {
+        alert("Payment of KSh " + amount + " for meter " + meterReading + " accepted.");
+      }
+    }
+
+    // Reads the values from the form and calls the validator
+    function checkForm() {
+      var meter = Number(document.getElementById("meter").value);
+      var amount = Number(document.getElementById("amount").value);
+      validatePayment(meter, amount);
+    }
+  </script>
+
+</body>
+</html>

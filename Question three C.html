@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Climate Awareness Campaign</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;   /* readable font with backup */
+      line-height: 1.6;
+    }
+
+    /* Container: two columns side by side */
+    .container {
+      display: flex;                 /* Flexbox layout */
+      gap: 20px;
+      padding: 20px;
+    }
+
+    /* Left column: sidebar */
+    .sidebar {
+      flex: 1;                       /* takes 1 part of the width */
+      background-color: #e8f5e9;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    /* Right column: main article */
+    .article {
+      flex: 3;                       /* takes 3 parts of the width */
+      padding: 15px;
+    }
+
+    /* Screens narrower than 600px: single column */
+    @media (max-width: 599px) {
+      .container {
+        flex-direction: column;      /* stack the columns */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <aside class="sidebar">
+      <h2>Quick Facts</h2>
+      <ul>
+        <li>Kenya is affected by droughts and floods.</li>
+        <li>Planting trees helps absorb carbon dioxide.</li>
+        <li>Saving energy reduces pollution.</li>
+      </ul>
+    </aside>
+
+    <main class="article">
+      <h1>Act Now for Our Climate</h1>
+      <p>Climate change is affecting farmers, families and wildlife across Kenya. Small actions in our communities, such as planting trees, saving water and using clean energy, can make a big difference.</p>
+      <p>Join the campaign and help build a greener future for the next generation.</p>
+    </main>
+
+  </div>
+
+</body>
+</html>

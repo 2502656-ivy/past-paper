@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kenyan Secondary School Quiz App</title>
+</head>
+<body>
+
+  <h1>Quiz App: Functions in JavaScript</h1>
+
+  <h2>i. Function declaration vs function expression</h2>
+
+  <h3>Function declaration</h3>
+  <p>A function created with the <code>function</code> keyword and a name. It is <b>hoisted</b>, which means it can be called before the line where it is written.</p>
+
+  <h3>Function expression</h3>
+  <p>A function stored inside a variable. It is <b>not hoisted</b>, so it can only be used after the line where it is defined. It is often written without a name (an anonymous function).</p>
+
+  <h2>ii. Purpose of the return statement</h2>
+  <p>The <code>return</code> statement sends a value back to the place where the function was called and stops the function. Without it, the function gives back <code>undefined</code>, so the result cannot be used elsewhere in the program.</p>
+
+  <h2>Quiz example</h2>
+  <p id="result"></p>
+
+  <script>
+    // FUNCTION DECLARATION: checks if the student's answer is correct
+    function checkAnswer(studentAnswer, correctAnswer) {
+      return studentAnswer === correctAnswer;   // sends true or false back
+    }
+
+    // FUNCTION EXPRESSION: calculates the student's percentage score
+    var calculateScore = function(marks, totalMarks) {
+      return (marks / totalMarks) * 100;        // sends the percentage back
+    };
+
+    // Using both functions
+    var isCorrect = checkAnswer("Nairobi", "Nairobi");
+    var score = calculateScore(8, 10);
+
+    document.getElementById("result").innerHTML =
+      "Answer correct: " + isCorrect + "<br>Score: " + score + "%";
+  </script>
+
+</body>
+</html>
